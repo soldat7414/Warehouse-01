@@ -22,4 +22,10 @@ public class ProductInfo {
         quantity = scanner.nextInt();
         scanner.close();
     }
+
+    // Метод рассчета общего веса.
+    static private double getTotalWeight(double weight, int quantity) {
+        return weight * quantity;
+    }
+
 }
