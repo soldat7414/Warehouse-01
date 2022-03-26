@@ -14,6 +14,10 @@ public class ProductInfo {
     static String totalWeightRounded;
     static private final String MEASURE = "кг";
 
+    public static void main(String[] args) {
+        doInputs();
+        showInfo(handleData());
+    }
 
     static private void doInputs(){
         Scanner scanner = new Scanner(System.in);
