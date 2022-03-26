@@ -18,10 +18,14 @@ public class ProductInfo {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Наименование товара: ");
         name = scanner.nextLine();
+        System.out.print("Вес товара" + " (" + MEASURE + "): ");
+        weight = scanner.nextDouble();
         System.out.print("Количество товара (шт.): ");
         quantity = scanner.nextInt();
         scanner.close();
     }
+
+
 
     // Метод рассчета общего веса.
     static private double getTotalWeight(double weight, int quantity) {
