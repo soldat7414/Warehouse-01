@@ -33,4 +33,9 @@ public class ProductInfo {
         return Rounder.roundWeight(totalWeight);
     }
 
+    // Метод вывода в консоль.
+    static private void showInfo(String output) {
+        System.out.println(output);
+    }
+
 }
