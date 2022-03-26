@@ -28,4 +28,9 @@ public class ProductInfo {
         return weight * quantity;
     }
 
+    // Метод округления общего веса.
+    static private String getTotalWeightRounded(double totalWeight) {
+        return Rounder.roundWeight(totalWeight);
+    }
+
 }
