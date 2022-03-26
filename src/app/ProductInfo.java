@@ -11,6 +11,7 @@ public class ProductInfo {
     static int quantity;
     static Product product;
     static double totalWeight;
+    static String totalWeightRounded;
     static private final String MEASURE = "кг";
 
 
@@ -25,7 +26,20 @@ public class ProductInfo {
         scanner.close();
     }
 
-
+    // Обработка данных
+    static private String handleData() {
+        // Создаем экземпляр товара
+        product = new Product(name, weight);
+        // Получаем имя
+        name = product.getName();
+        // Рассчитываем результат
+        totalWeight = getTotalWeight(product.getWeight(), quantity);
+        totalWeightRounded = getTotalWeightRounded(totalWeight);
+        // Подготовка вывода
+        return "------------------------\n" +
+                "Общий вес товара " + name + " (" + MEASURE + "): "
+                + totalWeightRounded;
+    }
 
     // Метод рассчета общего веса.
     static private double getTotalWeight(double weight, int quantity) {
